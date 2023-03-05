@@ -1,6 +1,6 @@
 ## MY PERSONAL PORTFOLIO IN PROGRESS
 
-## Technologies: React, Typescript, Vite, Sytled Components
+Technologies: React, Typescript, Vite, Sytled Components
 
 ## Upcoming todos
 
