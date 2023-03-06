@@ -2,6 +2,7 @@ import Navbar from '../Navbar';
 import * as S from './Hero.module';
 import Lottie from 'react-lottie';
 import animationData from '../../assets/animationData.json';
+import { Button } from '../../components';
 
 const Hero = () => {
   const defaultOptions = {
@@ -16,7 +17,7 @@ const Hero = () => {
     <S.Section className="section__hero">
       <Navbar />
       <S.Container className="container__hero">
-        <S.ContentAside>
+        <S.ContentAside className="content__aside">
           <S.Title>Hi. I'm Caio Mendes</S.Title>
           <S.WhoImIContainer>
             <S.Line src="/img/line.png" alt="line" />
@@ -24,8 +25,9 @@ const Hero = () => {
           </S.WhoImIContainer>
 
           <S.Paragraph> A brazilian front end developer who enjoy to play around with technology</S.Paragraph>
+          <Button>My skills</Button>
         </S.ContentAside>
-        <S.AnimationAside>
+        <S.AnimationAside className="animation__aside">
           <Lottie options={defaultOptions} height={600} width={600} />
         </S.AnimationAside>
       </S.Container>

@@ -1,5 +1,6 @@
-import Button from '../Button';
 import * as S from './Navbar.module';
+import { GitBranch, Star } from 'phosphor-react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -8,13 +9,18 @@ const Navbar = () => {
         <S.Links>
           <S.List>
             <S.ListItems>Home</S.ListItems>
-            <S.ListItems>Who</S.ListItems>
+            {/* <S.ListItems>Who</S.ListItems> */}
             <S.ListItems>Skills</S.ListItems>
             <S.ListItems>Projects</S.ListItems>
             <S.ListItems>Contact</S.ListItems>
           </S.List>
         </S.Links>
-        <Button>Teste</Button>
+        <NavLink to="https://github.com/caiosamarone/portfolio">
+          <S.GitButton>
+            <GitBranch size={18} weight="fill" />
+            <Star size={18} weight="fill" />
+          </S.GitButton>
+        </NavLink>
       </S.Container>
     </S.Section>
   );

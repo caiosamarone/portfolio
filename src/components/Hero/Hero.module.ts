@@ -30,6 +30,7 @@ export const AnimationAside = styled.div`
 
 export const Title = styled.h1`
   font-size: 4rem;
+  font-weight: 400;
 `;
 
 export const WhoImIContainer = styled.div`
