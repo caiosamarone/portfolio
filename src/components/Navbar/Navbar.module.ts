@@ -4,7 +4,6 @@ import Button from '../Button';
 export const Section = styled.div`
   display: flex;
   justify-content: center;
-  /* background: url(./img/bg.jpeg); */
 `;
 
 export const Container = styled.div`
@@ -14,6 +13,10 @@ export const Container = styled.div`
   align-items: center;
   height: 100px;
   color: white;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0px 1rem;
+  }
 `;
 
 export const Links = styled.div``;
@@ -26,6 +29,9 @@ export const List = styled.ul`
   list-style: none;
   display: flex;
   gap: 2rem;
+  @media screen and (max-width: 768px) {
+    gap: 1rem;
+  }
 `;
 
 export const ListItems = styled.li`

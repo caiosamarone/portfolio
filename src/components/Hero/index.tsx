@@ -4,6 +4,7 @@ import animationData from '../../assets/animationData.json';
 
 import Typewriter from 'typewriter-effect';
 import FadeIn from 'react-fade-in';
+import useMobile from '../../hooks/useMobile';
 
 const Hero = () => {
   const defaultOptions = {
@@ -14,6 +15,9 @@ const Hero = () => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   };
+
+  const { isMobile } = useMobile();
+  const mobilePixels = isMobile ? 300 : 600;
   return (
     <S.Section className="section__hero">
       <S.Container className="container__hero">
@@ -45,7 +49,7 @@ const Hero = () => {
           </FadeIn>
         </S.ContentAside>
         <S.AnimationAside className="animation__aside">
-          <Lottie options={defaultOptions} height={600} width={600} />
+          <Lottie options={defaultOptions} height={mobilePixels} width={mobilePixels} />
         </S.AnimationAside>
       </S.Container>
     </S.Section>
