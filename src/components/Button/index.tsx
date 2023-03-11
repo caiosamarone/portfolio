@@ -1,14 +1,15 @@
 import * as S from './Button.module';
+import React from 'react';
 
-interface Props {
+type ButtonProps = {
   onClick?: () => void;
   disabled?: boolean;
   children: React.ReactNode;
-}
+} & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({ onClick, disabled, children }: Props) => {
+const Button = ({ onClick, disabled, children, style }: ButtonProps) => {
   return (
-    <S.Button onClick={onClick} disabled={disabled}>
+    <S.Button onClick={onClick} disabled={disabled} style={style}>
       {children}
     </S.Button>
   );

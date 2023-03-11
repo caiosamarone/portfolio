@@ -1,19 +1,19 @@
-import { Router } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
-import { Contact, Hero, Projects, Skills, Who } from './components';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import * as S from './styles';
+import Layout from './components/Layout';
+import { Home, Contact, Skills, Projects } from './pages';
 
 function App() {
   return (
     <BrowserRouter>
-      <S.Container>
-        <Hero />
-        <Who />
-        <Skills />
-        <Projects />
-        <Contact />
-      </S.Container>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects />} />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }
